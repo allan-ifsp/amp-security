@@ -9,11 +9,14 @@ export function Home(){
     return(
         <div> 
             
-            
+            {/* comentario 000  */}
             <Quadrado />
             <Formcontato />
+        
         </div> 
     )
+    //comentario1
+    //comentario2
     //COMENTARIO PRA VER O MERGE 222222225555555555
         //opaaaaaaaa
 }
