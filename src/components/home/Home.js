@@ -10,9 +10,10 @@ export function Home(){
         <div> 
             <Carousel />
             <Jumbotron />
-            <Quadrado />
+            
             <Formcontato />
             <Quadrado />
         </div> 
     )
+    //COMENTARIO PRA VER O MERGE
 }
