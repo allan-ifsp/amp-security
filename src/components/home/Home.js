@@ -12,7 +12,7 @@ export function Home(){
             <Jumbotron />
             <Quadrado />
             <Formcontato />
+            <Quadrado />
         </div> 
     )
-    //COMENTARIO PRA VER O MERGE 57
 }
