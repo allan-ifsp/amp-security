@@ -9,7 +9,7 @@ export function Home(){
     return(
         <div> 
             
-            {/* meu asfjnodgoiee */}
+            <Carousel />
             <Quadrado />
             <Formcontato />
         
