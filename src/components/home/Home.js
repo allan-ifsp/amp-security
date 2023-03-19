@@ -10,9 +10,9 @@ export function Home(){
         <div>
             <Carousel />
             <Quadrado />
-            <Jumbotron />
+
             <Formcontato />
         </div> 
     )
-    //AGORA COM JUMBOTRON
+    //AGORA sem JUMBOTRON
 }
