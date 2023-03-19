@@ -10,7 +10,7 @@ export function Home(){
         <div>
             <Carousel />
             <Quadrado />
-
+            {/*editae qualquer coisa*/}
             <Formcontato />
         </div> 
     )
