@@ -9,7 +9,14 @@ export function Home(){
     return(
         <div> 
             
+            {/* meu asfjnodgoiee */}
+            <Quadrado />
+            <Formcontato />
+        
         </div> 
     )
-    //asdasdas awdsssssssssssssss asdasdasad O asdasdasdasasdasdas
+    //comentario1
+    //comentario2
+    //COMENTARIO PRA VER O MERGE 222222225555555555
+        //opaaaaaaaa
 }
