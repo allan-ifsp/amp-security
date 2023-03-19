@@ -9,8 +9,8 @@ export function Home(){
     return(
         <div>
             <Carousel />
+            <Jumbotron />
             <Quadrado />
-            {/*editae qualquer coisa*/}
             <Formcontato />
         </div> 
     )

@@ -35,14 +35,14 @@ export function NavScroll() {
                         Alguma outra coisa aqui
                     </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="#" disabled>Orçamento</Nav.Link>
+                <Nav.Link href="#">Contato</Nav.Link>
             </Nav>
-            <li class="nav-item">
+            <div class="nav-item">
                 <a class="nav-link disabled"></a>
-            </li>
-            <li class="nav-item">
+            </div>
+            <div class="nav-item">
                 <a class="nav-link disabled"></a>
-            </li>
+            </div>
             <Form className="d-flex minha-busca">
                 <Form.Control
                 type="search"

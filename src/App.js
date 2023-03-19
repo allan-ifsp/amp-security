@@ -16,8 +16,6 @@ function App() {
         {/* <Header /> */}
         <NavScroll />
         <Home />
-
-      
         <Footer />
       </div>
   );
