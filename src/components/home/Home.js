@@ -7,17 +7,12 @@ import { Formcontato } from "./formcontato/Formcontato";
 
 export function Home(){
     return(
-        <div> 
-            
+        <div>
             <Carousel />
             <Quadrado />
+            <Jumbotron />
             <Formcontato />
-        
         </div> 
     )
-    //comentario1
-    //comentario2
-    //COMENTARIO PRA VER O MERGE 222222225555555555
-        //opaaaaaaaa
-        //MDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+    //AGORA COM JUMBOTRON
 }
