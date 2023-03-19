@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
         {/* <Header /> */}
-        <Footer />
+        <NavScroll />
         <Home />
         <Footer />
       </div>

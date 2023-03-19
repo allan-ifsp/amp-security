@@ -10,7 +10,7 @@ export function Carousel() {
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={1}
-        src='https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg'
+        src='/imagens/meio-termo-cadeado.jpeg'
         alt='...'
       >
         <h5>First slide label</h5>
@@ -20,7 +20,7 @@ export function Carousel() {
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={2}
-        src='https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg'
+        src='/imagens/carousel3.jpeg'
         alt='...'
       >
         <h5>Second slide label</h5>
@@ -30,7 +30,7 @@ export function Carousel() {
       <MDBCarouselItem
         className='w-100 d-block'
         itemId={3}
-        src='https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg'
+        src='/imagens/meio-termo.jpeg'
         alt='...'
       >
         <h5>Third slide label</h5>

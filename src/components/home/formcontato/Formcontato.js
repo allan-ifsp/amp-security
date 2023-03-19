@@ -13,7 +13,8 @@ export function Formcontato() {
                     <MDBInput type='email' id='form4Example2' wrapperClass='mb-4' label='Email'/>
                     <MDBInput wrapperClass='mb-4' type='tel' id='form6Example6' label='Telefone'/>
                     <MDBInput wrapperClass='mb-4' textarea id='form4Example3' rows={4} label='Mensagem'/>
-                    <MDBBtn type='submit' className='mb-4' block>
+                    {/*className='btn btn-dark'*/}
+                    <MDBBtn type='submit' className='btn btn-dark' block>
                         Enviar
                     </MDBBtn>
                 </div>
