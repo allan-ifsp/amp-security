@@ -40,7 +40,7 @@ export default function Footer() {
         </section>
 
         <section className='mb-5'>
-          <h3 style={{'color':'blueviolet'}}>
+          <h3 style={{'color':'#1190cb'}}>
             Regiões Atendidas
           </h3>
         </section>
@@ -162,7 +162,7 @@ export default function Footer() {
 
 
       <section className='mb-4 mt-5'>
-        <h3 style={{'color':'blueviolet'}}>
+        <h3 style={{'color':'#1190cb'}}>
           SITEMAP
         </h3>
       </section>

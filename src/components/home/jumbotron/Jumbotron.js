@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
+import './jumbotron.css';
 export function Jumbotron() {
 
   return (
     <header>
       <div className='p-5 text-center bg-light'>
-        <h1 className='mb-3'>AMP Security</h1>
+        <h1 className='mb-3 mt-4 titulojumbotron' >AMP Security</h1>
         <h4 className='mb-3 p-5 text-center bg-light' >Somos uma empresa de segurança patrimonial que oferece soluções para
             proteção de propriedades de nossos clientes. A empresa utiliza tecnologias avançadas,
             incluindo sensores de proximidade e alarmes, para garantir a segurança do ambiente.

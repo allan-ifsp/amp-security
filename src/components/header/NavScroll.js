@@ -22,8 +22,8 @@ export function NavScroll() {
             <MDBContainer fluid>
                 <div>
                     <MDBNavbarBrand href='/'><img
-                        src='/imagens/logo.png'
-                        height='100'
+                        src='/imagens/fera.png'
+                        height='50'
                         alt=''
                         loading='lazy'
                     />

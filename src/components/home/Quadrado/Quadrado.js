@@ -23,7 +23,7 @@ export function Quadrado() {
             </a>
           </MDBRipple>
           <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
+            <MDBCardTitle>Acesso Remoto</MDBCardTitle>
             <MDBCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </MDBCardText>
@@ -40,7 +40,7 @@ export function Quadrado() {
             </a>
           </MDBRipple>
           <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
+            <MDBCardTitle>Multiplataforma</MDBCardTitle>
             <MDBCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </MDBCardText>
@@ -57,7 +57,7 @@ export function Quadrado() {
             </a>
           </MDBRipple>
           <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
+            <MDBCardTitle>Vigilancia</MDBCardTitle>
             <MDBCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </MDBCardText>
