@@ -9,6 +9,7 @@ import {
     MDBNavbarItem,
     MDBNavbarLink,
     MDBCollapse,
+    MDBBtn,
 } from 'mdb-react-ui-kit';
 import './navscroll.css'
 
@@ -55,7 +56,9 @@ export function NavScroll() {
                         </MDBNavbarItem>
 
                         <MDBNavbarItem>
-                            <MDBNavbarLink  className='text-black pe-5 fw-bold' href='#'>ACESSO</MDBNavbarLink>
+                              <MDBBtn rounded className='acesso mx-2' color='dark' href='#'> ACESSO
+                              </MDBBtn>
+                            {/*<MDBNavbarLink className='text-black pe-5 fw-bold' href='#'>ACESSO</MDBNavbarLink>*/}
                         </MDBNavbarItem>
 
                     </MDBNavbarNav>
