@@ -1,43 +1,68 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import './navscroll.css';
+import React, { useState } from 'react';
+import {
+    MDBContainer,
+    MDBNavbar,
+    MDBNavbarBrand,
+    MDBNavbarToggler,
+    MDBIcon,
+    MDBNavbarNav,
+    MDBNavbarItem,
+    MDBNavbarLink,
+    MDBCollapse,
+} from 'mdb-react-ui-kit';
+import './navscroll.css'
 
 export function NavScroll() {
-  return (
-      // bg="dark" variant="dark"
-      // <Navbar className="bg-success p-2" style={{ "--mdb-bg-opacity": "0.5" }} variant="dark" expand="xl" >
-      <Navbar className='meunavbar' expand="xl" >
-      <Container fluid >
-        <div>
-            <Navbar.Brand href="#"><img src="/imagens/logocompotencial.png" alt="Alan Turing" height='100px' /></Navbar.Brand>
-        </div>
-        <div>
-            <Navbar.Toggle className="bg-light p-2" style={{ "--mdb-bg-opacity": "0.5" }} aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-            <Nav
-                className="me-auto my-2 my-lg-0"
-                style={{ maxHeight: '100px' }}
-                navbarScroll
-            >
-                {/*<Nav.Link href="/">Home</Nav.Link>*/}
-                <Nav.Link href="#actionemp">Empresa</Nav.Link>
-                <NavDropdown title="Serviços" id="DropdownServicos">
-                    <NavDropdown.Item href="#action1">serviço 1</NavDropdown.Item>
-                    <NavDropdown.Item href="#action2">serviço 2</NavDropdown.Item>
-                    <NavDropdown.Item href="#action3">serviço 3</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="#">Contato</Nav.Link>
-                <div className="nav-item">
-                    <a className="nav-link disabled"></a>
-                </div>
-                <Nav.Link href="#a" className='fw-bolder justify-content-center'>ACESSO</Nav.Link>
-            </Nav>
-            </Navbar.Collapse>
-        </div>
+    const [showBasic, setShowBasic] = useState(false);
 
-      </Container>
-    </Navbar>
-  );
+    return (
+        //expand='lg' light bgColor='light'
+        <MDBNavbar className='meunavbar' expand='lg' light>
+            <MDBContainer fluid>
+                <div>
+                    <MDBNavbarBrand href='/'><img
+                        src='/imagens/logo.png'
+                        height='100'
+                        alt=''
+                        loading='lazy'
+                    />
+                    </MDBNavbarBrand>
+                </div>
+
+                <div>
+                <MDBNavbarToggler
+                    aria-controls='navbarSupportedContent'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
+                    onClick={() => setShowBasic(!showBasic)}
+                >
+                    <MDBIcon icon='bars' fas />
+                </MDBNavbarToggler>
+
+                <MDBCollapse navbar show={showBasic}>
+                    <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+                        <MDBNavbarItem>
+                            <MDBNavbarLink  className='text-black' active aria-current='page' href='#'>
+                                Empresa
+                            </MDBNavbarLink>
+                        </MDBNavbarItem>
+                        <MDBNavbarItem>
+                            <MDBNavbarLink  className='text-black' href='#'>Serviços</MDBNavbarLink>
+                        </MDBNavbarItem>
+
+                        <MDBNavbarItem>
+                            <MDBNavbarLink  className='text-black pe-5' href='#'>Contato</MDBNavbarLink>
+                        </MDBNavbarItem>
+
+                        <MDBNavbarItem>
+                            <MDBNavbarLink  className='text-black pe-5 fw-bold' href='#'>ACESSO</MDBNavbarLink>
+                        </MDBNavbarItem>
+
+                    </MDBNavbarNav>
+                    {/*<Nav.Link href="#a" className='fw-bolder justify-content-center'>ACESSO</Nav.Link>*/}
+                </MDBCollapse>
+                </div>
+            </MDBContainer>
+        </MDBNavbar>
+    );
 }

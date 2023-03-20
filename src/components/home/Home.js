@@ -4,7 +4,6 @@ import { Jumbotron } from "./jumbotron/Jumbotron";
 import { Quadrado } from "./Quadrado/Quadrado";
 import { Formcontato } from "./formcontato/Formcontato";
 
-
 export function Home(){
     return(
         <div>
