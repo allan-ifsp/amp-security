@@ -18,7 +18,7 @@ export function NavScroll() {
 
     return (
         //expand='lg' light bgColor='light'
-        <MDBNavbar className='meunavbar' fixed expand='sm' light>
+        <MDBNavbar className='meunavbar fixed-top' expand='sm' light>
             <MDBContainer fluid>
                 <div>
                     <MDBNavbarBrand href='/'><img

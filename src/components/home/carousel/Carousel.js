@@ -11,7 +11,7 @@ export function Carousel() {
     <MDBCarousel showIndicators showControls dealy={1500} fade>
 
       <MDBCarouselItem
-        className='w-100 vh-50 d-block meucarousel'
+        className='w-100 d-block meucarousel'
         itemId={1}
         src='/imagens/carousel1.jpeg'
         alt='...'
