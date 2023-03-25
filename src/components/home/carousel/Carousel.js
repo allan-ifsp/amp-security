@@ -3,14 +3,15 @@ import {
   MDBCarousel,
   MDBCarouselItem,
 } from 'mdb-react-ui-kit';
-import './meucarousel.css'
+/*import './meucarousel.css';*/
+import './carousel.css';
 
 export function Carousel() {
   return (
-    // <div className='meucarousel'>
-    <MDBCarousel showIndicators showControls fade>
+    <MDBCarousel showIndicators showControls dealy={1500} fade>
+
       <MDBCarouselItem
-        className='w-100 d-block'
+        className='w-100 vh-50 d-block meucarousel'
         itemId={1}
         src='/imagens/carousel1.jpeg'
         alt='...'
@@ -20,7 +21,7 @@ export function Carousel() {
       </MDBCarouselItem>
 
       <MDBCarouselItem
-        className='w-100 d-block'
+        className='w-100 d-block meucarousel'
         itemId={2}
         src='/imagens/carousel2.jpeg'
         alt='...'
@@ -28,6 +29,7 @@ export function Carousel() {
         <h5>Conforto</h5>
         <p>Acesse remotamente através de qualquer dispositivo móvel.</p>
       </MDBCarouselItem>
+
 
       {/*<MDBCarouselItem*/}
       {/*  className='w-100 d-block'*/}
@@ -39,6 +41,5 @@ export function Carousel() {
       {/*  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>*/}
       {/*</MDBCarouselItem>*/}
     </MDBCarousel>
-    // </div>
   );
 }

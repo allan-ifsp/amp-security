@@ -3,8 +3,8 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   color: #5a5a5a;
 }
 
@@ -20,19 +20,18 @@ body {
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
-  display: flex;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 55rem;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 100%;
 }
 
 
