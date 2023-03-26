@@ -8,11 +8,10 @@ import {Formcontato} from "./formcontato/Formcontato";
 export function Home(){
     return(
         <div>
-            <Carousel />
+            {/*<Carousel />*/}
             <Jumbotron />
             <Quadrado />
             <Formcontato />
-        </div> 
+        </div>
     )
-    //AGORA sem JUMBOTRON
 }

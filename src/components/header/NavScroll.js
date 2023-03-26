@@ -16,8 +16,8 @@ import {Login} from "../login/Login";
 import {Home} from "../home/Home";
 
 export function NavScroll() {
-    const [showBasic, setShowBasic] = useState(false);
-    const [showContent, setShowContent] = useState(<Home />);
+    const [showBasic, setShowBasic] = useState();
+    const [showContent, setShowContent] = useState(true);
 
     return (
         <div>
@@ -25,7 +25,7 @@ export function NavScroll() {
         <MDBNavbar className='meunavbar fixed-top' expand='sm' light>
             <MDBContainer fluid>
                 <div>
-                    <MDBNavbarBrand href='/'><img
+                    <MDBNavbarBrand onClick={() => setShowContent(<Home />)}><img
                         src='/imagens/fera.png'
                         height='50'
                         alt=''
@@ -58,14 +58,10 @@ export function NavScroll() {
                         <MDBNavbarItem>
                             <MDBNavbarLink  className='text-black pe-5' href='#contato'>Contato</MDBNavbarLink>
                         </MDBNavbarItem>
-                        <li>
-                            <a onClick={async() => await setShowContent(<Login />)}>acesso</a>
-                        </li>
-
-{/*                         <MDBNavbarItem> */}
-{/*                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Login />)}> ACESSO */}
-{/*                               </MDBBtn> */}
-{/*                         </MDBNavbarItem> */}
+                         <MDBNavbarItem>
+                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Login />)}> ACESSO
+                               </MDBBtn>
+                         </MDBNavbarItem>
 
                     </MDBNavbarNav>
                 </MDBCollapse>
