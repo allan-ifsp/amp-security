@@ -16,8 +16,8 @@ export function Carousel() {
         src='/imagens/carousel1.jpeg'
         alt='...'
       >
-        <h5>Segurança</h5>
-        <p>Sua casa protegida.</p>
+        <h3>SEGURANÇA</h3>
+        {/*<p> Sua casa protegida.</p>*/}
       </MDBCarouselItem>
 
       <MDBCarouselItem
@@ -26,8 +26,8 @@ export function Carousel() {
         src='/imagens/carousel2.jpeg'
         alt='...'
       >
-        <h5>Conforto</h5>
-        <p>Acesse remotamente através de qualquer dispositivo móvel.</p>
+        <h3>CONFORTO</h3>
+        {/*<p>Acesse remotamente através de qualquer dispositivo móvel.</p>*/}
       </MDBCarouselItem>
 
 
