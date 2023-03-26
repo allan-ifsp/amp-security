@@ -13,7 +13,7 @@ import {
 
 export function Quadrado() {
   return (
-      <div className='text-center '>
+      <div className='text-center' id='servicos'>
     <MDBRow className='row-cols-1 row-cols-sm-2 g-3 justify-content-center'>
       <MDBCol>
         <h1>Serviços</h1>

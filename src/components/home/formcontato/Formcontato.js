@@ -6,7 +6,7 @@ import {
 
 export function Formcontato() {
     return (
-        <div className="mx-auto" style={{width: "700px"}}>
+        <div className="mx-auto" style={{width: "700px"}} id='contato'>
             <form className='justify-content-center'>
                 <div className='p-5 text-center '>
                     <MDBInput id='form4Example1' wrapperClass='mb-4' label='Nome'/>
@@ -20,6 +20,5 @@ export function Formcontato() {
                 </div>
             </form>
         </div>
-
     );
 }

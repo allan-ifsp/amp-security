@@ -7,17 +7,16 @@ import Footer from './components/footer/Footer';
 import { Home } from './components/home/Home';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Login from "./components/login/Login";
 
 
 
 function App() {
-  return (
+  return(
     <div>
-        {/* <Header /> */}
         <NavScroll />
-        <Home />
         <Footer />
-      </div>
+    </div>
   );
 }
 

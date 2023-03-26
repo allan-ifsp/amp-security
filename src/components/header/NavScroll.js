@@ -12,12 +12,16 @@ import {
     MDBBtn,
 } from 'mdb-react-ui-kit';
 import './navscroll.css'
+import {Login} from "../login/Login";
+import {Home} from "../home/Home";
 
 export function NavScroll() {
     const [showBasic, setShowBasic] = useState(false);
+    const [showContent, setShowContent] = useState(<Home />);
 
     return (
-        //expand='lg' light bgColor='light'
+        <div>
+{/*         //expand='lg' light bgColor='light' */}
         <MDBNavbar className='meunavbar fixed-top' expand='sm' light>
             <MDBContainer fluid>
                 <div>
@@ -48,24 +52,27 @@ export function NavScroll() {
                             </MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBNavbarLink  className='text-black' href='#'>Serviços</MDBNavbarLink>
+                            <MDBNavbarLink  className='text-black' href='#servicos'>Serviços</MDBNavbarLink>
                         </MDBNavbarItem>
 
                         <MDBNavbarItem>
-                            <MDBNavbarLink  className='text-black pe-5' href='#'>Contato</MDBNavbarLink>
+                            <MDBNavbarLink  className='text-black pe-5' href='#contato'>Contato</MDBNavbarLink>
                         </MDBNavbarItem>
+                        <li>
+                            <a onClick={async() => await setShowContent(<Login />)}>acesso</a>
+                        </li>
 
-                        <MDBNavbarItem>
-                              <MDBBtn rounded className='acesso mx-2' color='dark' href='#'> ACESSO
-                              </MDBBtn>
-                            {/*<MDBNavbarLink className='text-black pe-5 fw-bold' href='#'>ACESSO</MDBNavbarLink>*/}
-                        </MDBNavbarItem>
+{/*                         <MDBNavbarItem> */}
+{/*                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Login />)}> ACESSO */}
+{/*                               </MDBBtn> */}
+{/*                         </MDBNavbarItem> */}
 
                     </MDBNavbarNav>
-                    {/*<Nav.Link href="#a" className='fw-bolder justify-content-center'>ACESSO</Nav.Link>*/}
                 </MDBCollapse>
                 </div>
             </MDBContainer>
         </MDBNavbar>
+        {showContent}
+        </div>
     );
 }
