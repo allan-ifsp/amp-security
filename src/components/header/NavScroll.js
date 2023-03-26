@@ -43,7 +43,7 @@ export function NavScroll() {
                 <MDBCollapse navbar show={showBasic}>
                     <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
                         <MDBNavbarItem>
-                            <MDBNavbarLink  className='text-black' active aria-current='page' href='#'>
+                            <MDBNavbarLink  className='text-black' active aria-current='page' href='#empresa'>
                                 Empresa
                             </MDBNavbarLink>
                         </MDBNavbarItem>
