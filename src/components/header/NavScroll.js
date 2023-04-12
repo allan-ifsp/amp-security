@@ -17,7 +17,7 @@ import {Home} from "../home/Home";
 
 export function NavScroll() {
     const [showBasic, setShowBasic] = useState();
-    const [showContent, setShowContent] = useState(true);
+    const [showContent, setShowContent] = useState(<Home />);
 
     return (
         <div>

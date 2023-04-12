@@ -1,46 +1,28 @@
-import React from 'react';
-import {
-  MDBCarousel,
-  MDBCarouselItem,
-} from 'mdb-react-ui-kit';
-import './carousel.css';
 
-export function Carousel() {
-  return (
-      <div>
-    <MDBCarousel showIndicators showControls dealy={1500} fade>
-
-      <MDBCarouselItem
-        className='w-100 d-block'
-        itemId={1}
-        src='/imagens/carousel1.jpeg'
-        alt='...'
-      >
-        <h3>SEGURANÇA</h3>
-        {/*<p> Sua casa protegida.</p>*/}
-      </MDBCarouselItem>
-
-      <MDBCarouselItem
-        className='w-100 d-block'
-        itemId={2}
-        src='/imagens/carousel2.jpeg'
-        alt='...'
-      >
-        <h3>CONFORTO</h3>
-        {/*<p>Acesse remotamente através de qualquer dispositivo móvel.</p>*/}
-      </MDBCarouselItem>
-
-
-      {/*<MDBCarouselItem*/}
-      {/*  className='w-100 d-block'*/}
-      {/*  itemId={3}*/}
-      {/*  src='/imagens/meio-termo.jpeg'*/}
-      {/*  alt='...'*/}
-      {/*>*/}
-      {/*  <h5>Third slide label</h5>*/}
-      {/*  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>*/}
-      {/*</MDBCarouselItem>*/}
-    </MDBCarousel>
-      </div>
-  );
+export function Celta(){
+    return(
+        <div id="carouselExampleIndicators" className="carousel" data-ride="carousel">
+            <ol className="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div className="carousel-inner">
+                <div className="carousel-item active">
+                    <img src="./imagens/carousel1.jpeg" className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item">
+                    <img src="/imagens/carousel2.jpeg" className="d-block w-100" alt="..." />
+                </div>
+            </div>
+            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
+            </a>
+            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
+            </a>
+        </div>
+    )
 }
