@@ -11,6 +11,7 @@ export function Home(){
         <div>
             <Celta />
             <Jumbotron />
+            <br />
             <Quadrado />
             <Formcontato />
         </div>

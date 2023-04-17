@@ -11,20 +11,21 @@ import './login.css'
 export function Login() {
     return (
         <form>
-            <MDBInput className='mb-4' type='email' id='form1Example1' label='Email address' />
-            <MDBInput className='mb-4' type='password' id='form1Example2' label='Password' />
+            <h1 className='text-center p-3'>Acesso</h1>
+            <MDBInput className='mb-4' type='email' id='form1Example1' label='CPF' />
+            <MDBInput className='mb-4' type='password' id='form1Example2' label='Senha' />
 
             <MDBRow className='mb-4'>
                 <MDBCol className='d-flex justify-content-center'>
-                    <MDBCheckbox id='form1Example3' label='Remember me' defaultChecked />
+                    <MDBCheckbox id='form1Example3' label='Lembrar'/>
                 </MDBCol>
                 <MDBCol>
-                    <a href='#!'>Forgot password?</a>
+                    <a href='#!'>Esqueci a senha</a>
                 </MDBCol>
             </MDBRow>
 
             <MDBBtn type='submit' block>
-                Sign in
+                Acessar
             </MDBBtn>
         </form>
     );

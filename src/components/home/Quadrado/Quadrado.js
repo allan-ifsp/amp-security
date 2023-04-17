@@ -10,13 +10,17 @@ import {
   MDBCol,
   MDBRow
 } from 'mdb-react-ui-kit';
+import './quadrado.css'
 
 export function Quadrado() {
   return (
-      <div className='text-center' id='servicos'>
+      <div id='servicos'>
+      <div className='quadrado'></div>
+      <div className='text-center bg-dark pb-5 '>
+
     <MDBRow className='row-cols-1 row-cols-sm-2 g-3 justify-content-center'>
       <MDBCol>
-        <h1>Serviços</h1>
+        <h1 className='text-light'>Serviços</h1>
       </MDBCol>
     </MDBRow>
     <MDBRow className='row-cols-1 row-cols-sm-2 g-3 justify-content-center'>
@@ -33,7 +37,7 @@ export function Quadrado() {
             <MDBCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </MDBCardText>
-            <MDBBtn href='#' className='btn btn-dark'>Button</MDBBtn>
+            {/*<MDBBtn href='#' className='btn btn-dark'>Button</MDBBtn>*/}
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
@@ -50,7 +54,7 @@ export function Quadrado() {
             <MDBCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </MDBCardText>
-            <MDBBtn href='#' className='btn btn-dark'>Button</MDBBtn>
+            {/*<MDBBtn href='#' className='btn btn-dark'>Button</MDBBtn>*/}
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
@@ -67,11 +71,12 @@ export function Quadrado() {
             <MDBCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </MDBCardText>
-            <MDBBtn href='#' className='btn btn-dark'>Button</MDBBtn>
+            {/*<MDBBtn href='#' className='btn btn-dark'>Button</MDBBtn>*/}
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
     </MDBRow>
+      </div>
       </div>
   );
 }

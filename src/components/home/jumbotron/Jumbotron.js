@@ -5,8 +5,8 @@ export function Jumbotron() {
   return (
     <header id='empresa'>
       <div className='p-5 text-center bg-light'>
-        <h1 className='mb-3 mt-4 titulojumbotron' >AMP Security</h1>
-        <h4 className='mb-3 p-5 text-center bg-light' >
+        <h1 className=' mt-5 titulojumbotron' >AMP Security</h1>
+        <h4 className='mb-3 mt-5 text-center bg-light' >
             <ul>
                 <li>
                     Somos uma empresa de segurança patrimonial que oferece soluções para
@@ -40,7 +40,7 @@ export function Jumbotron() {
                 </li>
             </ul>
         </h4>
-        <a className='btn btn-dark' href='' role='button'>
+        <a className='btn btn-dark m-3' href='' role='button'>
           Contato
         </a>
       </div>

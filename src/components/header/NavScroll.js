@@ -22,7 +22,7 @@ export function NavScroll() {
     return (
         <div>
 {/*         //expand='lg' light bgColor='light' */}
-        <MDBNavbar className='meunavbar fixed-top' expand='sm' light>
+        <MDBNavbar className='meunavbar' fixed='top' expand='sm' light>
             <MDBContainer fluid>
                 <div>
                     <MDBNavbarBrand onClick={() => setShowContent(<Home />)}><img
