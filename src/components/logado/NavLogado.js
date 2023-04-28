@@ -1,41 +1,54 @@
-import React, { useState } from 'react';
-import '../header/navscroll.css'
-// import {Home} from "../home/Home";
-import './navlogado.css'
-//import '../header/logado.css'
+import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 
-export function NavLogado() {
-    const [showBasic, setShowBasic] = useState();
-    const [showContent, setShowContent] = useState();
+// Be sure to include styles at some point, probably during your bootstraping
+import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import {queries} from "@testing-library/react";
 
-    return (
-        <div className='navlogado'>
-            <nav>
-                <ul className='menu'>
-                    <li>
-                        <a onClick={() => setShowContent()}>Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>Cameras</li>
-                    <li><a>cam1</a></li>
-                    <li><a>cam2</a></li>
-                    <li><a>cam3</a></li>
-                </ul>
-                <ul>
-                    <li>PIR's</li>
-                    <li><a>pir1</a></li>
-                    <li><a>pir2</a></li>
-                    <li><a>pir3</a></li>
-                </ul>
-                <ul>
-                    <li>Alarmes</li>
-                    <li><a>alarme1</a></li>
-                    <li><a>al2</a></li>
-                    <li><a>al3</a></li>
-                </ul>
-            </nav>
-            {showContent}
-        </div>
-    );
+export function NavLogado(){
+
+    return(
+    <SideNav style={{backgroundColor:'#221e1e'}}
+        onSelect={(selected) => {
+            // Add your code here
+        }}
+    >
+        <SideNav.Toggle/>
+        <SideNav.Nav defaultSelected="home">
+            <NavItem eventKey="home">
+                <NavIcon>
+                    <i className="fa fa-fw fa-home" style={{fontSize: '1.75em'}}/>
+                </NavIcon>
+                <NavText>
+                    Home
+                </NavText>
+            </NavItem>
+            <NavItem eventKey="charts">
+                <NavIcon>
+                    <i className="fa fa-fw fa-video-camera" style={{fontSize: '1.75em'}}/>
+                </NavIcon>
+                <NavText>
+                    Cameras
+                </NavText>
+                <NavItem eventKey="charts/linechart">
+                    <NavText>
+                       cam 1
+                    </NavText>
+                </NavItem>
+                <NavItem eventKey="charts/barchart">
+                    <NavText>
+                        cam 2
+                    </NavText>
+                </NavItem>
+            </NavItem>
+            <NavItem eventKey="home">
+                <NavIcon>
+                    <i className="fa fa-fw fa-feed" style={{fontSize: '1.75em'}}/>
+                </NavIcon>
+                <NavText>
+                    PIR's
+                </NavText>
+            </NavItem>
+        </SideNav.Nav>
+    </SideNav>
+    )
 }

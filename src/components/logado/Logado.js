@@ -4,12 +4,10 @@ import "../header/logado.css";
 
 export function Logado(){
     return(
-        <div className='posicao'>
+        <div>
 
             <NavLogado />
-            <div className='nome'>
-                <p >SASASASAS</p>
-            </div>
+            
         </div>
     )
 }

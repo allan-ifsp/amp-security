@@ -12,12 +12,12 @@ import {Logado} from "./components/logado/Logado";
 
 function App() {
   return(
-    <div>
-        {/*<NavScroll />*/}
-        {/*<Home />*/}
-        <Logado />
-        <Footer />
-    </div>
+        <div>
+             {/*<NavScroll />*/}
+    {/*       <Home />  */}
+            <Logado />
+            <Footer />
+        </div>
   );
 }
 
