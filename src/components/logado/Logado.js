@@ -1,12 +1,15 @@
 import Footer from "../footer/Footer";
-import {NavLogado} from "../header/NavLogado";
+import {NavLogado} from "./NavLogado";
+import "../header/logado.css";
 
 export function Logado(){
     return(
+        <div className='posicao'>
 
-        <div>
             <NavLogado />
-            <Footer />
+            <div className='nome'>
+                <p >SASASASAS</p>
+            </div>
         </div>
     )
 }
