@@ -9,6 +9,8 @@ import {
 import './login.css'
 
 export function Login() {
+    const [showContent, setShowContent] = useState(<Home />);
+
     return (
         <form>
             <h1 className='text-center p-3'>Acesso</h1>
@@ -28,5 +30,6 @@ export function Login() {
                 Acessar
             </MDBBtn>
         </form>
+        {showContent}
     );
 }

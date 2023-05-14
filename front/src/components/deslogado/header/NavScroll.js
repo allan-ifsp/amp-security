@@ -14,6 +14,8 @@ import {
 import './navscroll.css'
 import {Login} from "../login/Login";
 import {Home} from "../home/Home";
+import {Logado} from "../../logado/Logado";
+import {Formcontato} from "../home/formcontato/Formcontato";
 
 export function NavScroll() {
     const [showBasic, setShowBasic] = useState();
@@ -47,19 +49,26 @@ export function NavScroll() {
                 <MDBCollapse navbar show={showBasic}>
                     <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
                         <MDBNavbarItem>
-                            <MDBNavbarLink  className='text-black' active aria-current='page' href='#empresa'>
+                            <MDBNavbarLink onClick={() => setShowContent(<Home />)} className='text-black' active aria-current='page' href='#empresa'>
                                 Empresa
                             </MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                            <MDBNavbarLink  className='text-black' href='#servicos'>Serviços</MDBNavbarLink>
+                            <MDBNavbarLink onClick={() => setShowContent(<Home />)} className='text-black' href='#servicos'>Serviços</MDBNavbarLink>
+                        </MDBNavbarItem>
+                        <MDBNavbarItem>
+                            <MDBNavbarLink onClick={() => setShowContent(<Home />)} className='text-black pe-5' href='#contato' >Contato</MDBNavbarLink>
                         </MDBNavbarItem>
 
-                        <MDBNavbarItem>
-                            <MDBNavbarLink  className='text-black pe-5' href='#contato'>Contato</MDBNavbarLink>
-                        </MDBNavbarItem>
+{/*                         <MDBNavbarItem> */}
+{/*                             <MDBNavbarLink onClick={() => setShowContent(<Home />)} className='text-black pe-5' href='#paginalogado' ></MDBNavbarLink> */}
+{/*                         </MDBNavbarItem> */}
                          <MDBNavbarItem>
                                <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Login />)}> ACESSO
+                               </MDBBtn>
+                         </MDBNavbarItem>
+                        <MDBNavbarItem>
+                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Logado />)}> Acessar
                                </MDBBtn>
                          </MDBNavbarItem>
 
