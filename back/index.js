@@ -3,13 +3,18 @@ const app = express()
 
 const port = 9853
 
+// const Usuario = require('./model/entidade/Usuario');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+    res.send('Hello Mundo!');
 
+});
 
+app.use("/usuario", require("./UserCRUD/UsuarioCRUD"));
 
-
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`)
-})
+app.listen(port, async () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
