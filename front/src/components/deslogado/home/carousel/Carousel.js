@@ -9,7 +9,7 @@ export function Celta(){
             </ol>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="./imagens/carousel1.jpeg" className="d-block w-100" alt="..." />
+                    <img src="/imagens/carousel1.jpeg" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
                     <img src="/imagens/carousel2.jpeg" className="d-block w-100" alt="..." />
