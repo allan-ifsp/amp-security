@@ -13,6 +13,11 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/teste', (req, res) => {
+    console.log("Teste funcionou!!!");
+    res.status(200).send('funcionou!!!!');
+})
+
 app.use("/usuario", require("./UserCRUD/UsuarioCRUD"));
 
 app.listen(port, async () => {

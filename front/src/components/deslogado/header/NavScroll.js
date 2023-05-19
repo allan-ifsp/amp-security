@@ -60,18 +60,10 @@ export function NavScroll() {
                             <MDBNavbarLink onClick={() => setShowContent(<Home />)} className='text-black pe-5' href='#contato' >Contato</MDBNavbarLink>
                         </MDBNavbarItem>
 
-{/*                         <MDBNavbarItem> */}
-{/*                             <MDBNavbarLink onClick={() => setShowContent(<Home />)} className='text-black pe-5' href='#paginalogado' ></MDBNavbarLink> */}
-{/*                         </MDBNavbarItem> */}
-                         <MDBNavbarItem>
-                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Login />)}> ACESSO
-                               </MDBBtn>
-                         </MDBNavbarItem>
                         <MDBNavbarItem>
-                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Logado />)}> Acessar
+                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Login />)}> Acessar
                                </MDBBtn>
                          </MDBNavbarItem>
-
                     </MDBNavbarNav>
                 </MDBCollapse>
                 </div>
