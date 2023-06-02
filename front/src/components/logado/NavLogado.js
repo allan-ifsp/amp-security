@@ -3,25 +3,34 @@ import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/rea
 // Be sure to include styles at some point, probably during your bootstraping
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import {queries} from "@testing-library/react";
+import {NavLink, redirect} from "react-router-dom";
 
 export function NavLogado(){
 
     return(
     <SideNav style={{backgroundColor:'#221e1e'}}
         onSelect={(selected) => {
-            // Add your code here
+            if (selected == "pir") {
+                console.log("pre fetch")
+                fetch("http://sc3004996.glitch.me/quero?", {
+                    method: "POST",
+                });
+                console.log("pos fetch")
+            }
         }}
     >
         <SideNav.Toggle/>
         <SideNav.Nav defaultSelected="home">
-            <NavItem eventKey="home">
+            <NavLink  to="/" exact>
+                <NavItem eventKey="home">
                 <NavIcon>
                     <i className="fa fa-fw fa-home" style={{fontSize: '1.75em'}}/>
                 </NavIcon>
                 <NavText>
                     Home
                 </NavText>
-            </NavItem>
+                </NavItem>
+            </NavLink>
             <NavItem eventKey="charts">
                 <NavIcon>
                     <i className="fa fa-fw fa-video-camera" style={{fontSize: '1.75em'}}/>
@@ -40,7 +49,7 @@ export function NavLogado(){
                     </NavText>
                 </NavItem>
             </NavItem>
-            <NavItem eventKey="home">
+            <NavItem eventKey="pir">
                 <NavIcon>
                     <i className="fa fa-fw fa-feed" style={{fontSize: '1.75em'}}/>
                 </NavIcon>

@@ -12,9 +12,11 @@ router.post('/login', async (req, res) => {
             res.redirect("http://localhost:3000/paginalogado")
         }else{
             console.log("Senha incorreta")
+            res.status(401).send("Senha incorreta")
         }
     }else{
         console.log("Usuario nao encontrado")
+        res.status(404).send("Usuario nao encontrado")
     }
 });
 

@@ -24,9 +24,9 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/paginalogado" element={<Logado />}></Route>
+                    <Route path="/" element={<MainDeslogado />}></Route>
                 </Routes>
             </Router>
-            {showContent}
             <Footer />
         </div>
   );
