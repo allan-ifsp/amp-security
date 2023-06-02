@@ -9,40 +9,13 @@ router.post('/login', async (req, res) => {
     if (usuario){
         if(usuario.dataValues.senha == md5(req.body.senha)){
             console.log("Usuario encontrado")
-            res.redirect("https://localhost:3000/?a")
+            res.redirect("http://localhost:3000/paginalogado")
         }else{
-            console.log("Senha errada")
+            console.log("Senha incorreta")
         }
+    }else{
+        console.log("Usuario nao encontrado")
     }
-    // const usuarios = await Usuario.findAll();
-    // // console.log("usuario req login:", req.body.login )
-    // // console.log("usuario req senha:", md5(req.body.senha) )
-    // usuarios.forEach(usuario => {
-    //     // console.log("usuario bd login:", usuario.dataValues.login)
-    //     // console.log("usuario bd senha:", usuario.dataValues.senha)
-    //     if(usuario.dataValues.login == req.body.login){
-    //         if(usuario.dataValues.senha == md5(req.body.senha)){
-    //             console.log("Usuario encontrado")
-    //             return true
-    //         }else{
-    //             console.log("Senha errada")
-    //         }
-    //     }else{
-    //         console.log("usuario n encontrado")
-    //     }
-    //     return false;
-    // })
-
-    // var senha = md5(req.body.senha)
-    // try{
-    //     const user = await Usuario.create({
-    //             login: req.body.login,
-    //             senha: senha
-    //         });
-    //     res.json(user);
-    // }catch (e) {
-    //     res.status("400").json({Erro: "Login nao disponivel"})
-    // }
 });
 
 router.post('/add', async (req, res) => {

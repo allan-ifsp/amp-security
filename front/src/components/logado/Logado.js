@@ -6,7 +6,6 @@ import {Camera} from "./camera/Camera";
 export function Logado(){
     return(
         <div id='paginalogado'>
-
             <NavLogado />
             <Camera />
         </div>

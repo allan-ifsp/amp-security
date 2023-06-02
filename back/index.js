@@ -23,13 +23,6 @@ app.post('/teste', (req, res) => {
     res.send('Hello mundo');
 });
 
-// app.post('/login', async (req, res) => {
-//     const login = req.body.login;
-//     const senha = md5(req.body.senha);
-//     await Usuario.sync();
-//
-// });
-
 app.get('/teste', (req, res) => {
     console.log("Teste funcionou!!!");
     res.status(200).send('funcionou!!!!');
