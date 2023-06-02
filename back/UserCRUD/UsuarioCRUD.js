@@ -4,20 +4,34 @@ const md5 = require("md5");
 router.post('/login', async (req, res) => {
     await Usuario.sync();
     console.log(`procurando usuario no banco`);
-    const usuarios = await Usuario.findAll();
-    usuarios.forEach(usuario => {
-        if(usuario.login === req.body.login){
-            if(usuario.senha === md5(req.body.senha)){
-                console.log("Usuario encontrado")
-                return true
-            }else{
-                console.log("Senha errada")
-            }
+
+    const usuario = await  Usuario.findOne({where: {login: req.body.login}})
+    if (usuario){
+        if(usuario.dataValues.senha == md5(req.body.senha)){
+            console.log("Usuario encontrado")
+            res.redirect("https://localhost:3000/?a")
         }else{
-            console.log("Usuario nao encontrado")
+            console.log("Senha errada")
         }
-        return false;
-    })
+    }
+    // const usuarios = await Usuario.findAll();
+    // // console.log("usuario req login:", req.body.login )
+    // // console.log("usuario req senha:", md5(req.body.senha) )
+    // usuarios.forEach(usuario => {
+    //     // console.log("usuario bd login:", usuario.dataValues.login)
+    //     // console.log("usuario bd senha:", usuario.dataValues.senha)
+    //     if(usuario.dataValues.login == req.body.login){
+    //         if(usuario.dataValues.senha == md5(req.body.senha)){
+    //             console.log("Usuario encontrado")
+    //             return true
+    //         }else{
+    //             console.log("Senha errada")
+    //         }
+    //     }else{
+    //         console.log("usuario n encontrado")
+    //     }
+    //     return false;
+    // })
 
     // var senha = md5(req.body.senha)
     // try{

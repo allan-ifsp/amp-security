@@ -1,6 +1,10 @@
 import { NavScroll } from './components/deslogado/header/NavScroll';
 import './App.css';
-
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route
+} from "react-router-dom";
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
 // import 'bootstrap/dist/css/bootstrap.css';
 import Footer from './components/footer/Footer';
@@ -17,6 +21,11 @@ function App() {
 
     return(
         <div>
+            <Router>
+                <Routes>
+                    <Route path="/paginalogado" element={<Logado />}></Route>
+                </Routes>
+            </Router>
             {showContent}
             <Footer />
         </div>

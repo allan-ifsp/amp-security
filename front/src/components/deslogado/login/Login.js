@@ -13,10 +13,11 @@ export function Login() {
 
     return (
         <div>
-            <form action="http://sc3004996.glitch.me/quero?" method="post">
+            {/*<form action="http://sc3004996.glitch.me/quero?" method="post">*/}
+            <form action="http://localhost:9853/usuario/login" method="post">
                 <h1 className='text-center p-3'>Acesso</h1>
-                <MDBInput className='mb-4' type='email' id='form1Example1' label='CPF' />
-                <MDBInput className='mb-4' type='password' id='form1Example2' label='Senha' />
+                <MDBInput className='mb-4' type='text' name='login' id='form1Example1' label='CPF' />
+                <MDBInput className='mb-4' type='password' name='senha' id='form1Example2' label='Senha' />
 
                 <MDBRow className='mb-4'>
                     <MDBCol className='d-flex justify-content-center'>

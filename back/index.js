@@ -3,6 +3,7 @@ const {Json} = require("sequelize/lib/utils");
 const app = express()
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
+const Usuario = require('./model/entidade/Usuario');
 
 const port = 9853
 
@@ -15,12 +16,19 @@ app.use(express.urlencoded({ extended: true })); //usar formularios tem que usar
 const md5 = require("md5");
 
 app.post('/teste', (req, res) => {
-    var login = req.body.login;
-    var senha = md5(req.body.senha);
+    const login = req.body.login;
+    const senha = md5(req.body.senha);
     console.log({login});
     console.log({senha});
     res.send('Hello mundo');
 });
+
+// app.post('/login', async (req, res) => {
+//     const login = req.body.login;
+//     const senha = md5(req.body.senha);
+//     await Usuario.sync();
+//
+// });
 
 app.get('/teste', (req, res) => {
     console.log("Teste funcionou!!!");
