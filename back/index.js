@@ -7,7 +7,6 @@ const Usuario = require('./model/entidade/Usuario');
 
 const port = 9853
 
-// const Usuario = require('./model/entidade/Usuario');
 
 // app.use(express.json());
 app.use(cors())
