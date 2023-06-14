@@ -4,18 +4,25 @@ import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/rea
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import {queries} from "@testing-library/react";
 import {NavLink, redirect} from "react-router-dom";
+import React, {useState} from "react";
+import {Home} from "../deslogado/home/Home";
+import {Camera} from "./Camera";
+import Sensor from "./Sensor";
 
 export function NavLogado(){
 
+    const [showContent, setShowContent] = useState(<Camera />);
+
     return(
+        <div>
     <SideNav style={{backgroundColor:'#221e1e'}}
         onSelect={(selected) => {
             if (selected == "pir") {
-                console.log("pre fetch")
+                // console.log("pre fetch")
                 fetch("http://sc3004996.glitch.me/quero?", {
                     method: "POST",
                 });
-                console.log("pos fetch")
+                // console.log("pos fetch")
             }
         }}
     >
@@ -39,7 +46,7 @@ export function NavLogado(){
                     Cameras
                 </NavText>
                 <NavItem eventKey="charts/linechart">
-                    <NavText>
+                    <NavText onClick={() => setShowContent(<Sensor />)}>
                        cam 1
                     </NavText>
                 </NavItem>
@@ -59,5 +66,7 @@ export function NavLogado(){
             </NavItem>
         </SideNav.Nav>
     </SideNav>
+    {showContent}
+        </div>
     )
 }

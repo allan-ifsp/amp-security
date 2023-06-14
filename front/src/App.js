@@ -11,9 +11,9 @@ import Footer from './components/footer/Footer';
 import { Home } from './components/deslogado/home/Home';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import {Logado} from "./components/logado/Logado";
 import React, {useState} from "react";
 import {MainDeslogado} from "./components/deslogado/MainDeslogado";
+import {NavLogado} from "./components/logado/NavLogado";
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <div>
             <Router>
                 <Routes>
-                    <Route path="/paginalogado" element={<Logado />}></Route>
+                    <Route path="/paginalogado" element={<NavLogado />}></Route>
                     <Route path="/" element={<MainDeslogado />}></Route>
                 </Routes>
             </Router>

@@ -18,20 +18,17 @@ router.post('/login', async (req, res) => {
     if (usuario){
         if(usuario.dataValues.senha == md5(req.body.senha)){
             console.log("Usuario encontrado")
-            res.redirect("http://localhost:3000/paginalogado")
+            // res.redirect("http://localhost:3000/paginalogado")
+            res.json(usuario)
         }else{
             console.log("Senha incorreta")
             // res.status(401).send("Senha incorreta")
-            // setTimeout(() => {  console.log("World!"); }, 500000);
-            sleep(3000);
-            res.redirect("http://localhost:3000/")
+            res.status(401).json({Erro: "Senha incorreta"})
         }
     }else{
         console.log("Usuario nao encontrado")
         // res.status(404).send("Usuario nao encontrado")
-        // setTimeout(() => {  console.log("World!"); }, 500000);
-        sleep(3000)
-        res.redirect("http://localhost:3000/")
+        res.status(404).json({Erro: "Usuario nao encontrado"})
     }
 });
 

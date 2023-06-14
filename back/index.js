@@ -10,22 +10,8 @@ const port = 9853
 
 // app.use(express.json());
 app.use(cors())
-app.use(cookieParser());
+
 app.use(express.urlencoded({ extended: true })); //usar formularios tem que usar urlenconded
-const md5 = require("md5");
-
-app.post('/teste', (req, res) => {
-    const login = req.body.login;
-    const senha = md5(req.body.senha);
-    console.log({login});
-    console.log({senha});
-    res.send('Hello mundo');
-});
-
-app.get('/teste', (req, res) => {
-    console.log("Teste funcionou!!!");
-    res.status(200).send('funcionou!!!!');
-})
 
 app.use("/usuario", require("./UserCRUD/UsuarioCRUD"));
 

@@ -14,7 +14,6 @@ import {
 import './navscroll.css'
 import {Login} from "../login/Login";
 import {Home} from "../home/Home";
-import {Logado} from "../../logado/Logado";
 import {Formcontato} from "../home/formcontato/Formcontato";
 
 export function NavScroll() {
