@@ -3,33 +3,56 @@ import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/rea
 // Be sure to include styles at some point, probably during your bootstraping
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import {queries} from "@testing-library/react";
-import {NavLink, redirect} from "react-router-dom";
+import {Link, NavLink, redirect} from "react-router-dom";
 import React, {useState} from "react";
 import {Home} from "../deslogado/home/Home";
 import {Camera} from "./Camera";
 import Sensor from "./Sensor";
+import Log from "./Log";
 
 export function NavLogado(){
 
     const [showContent, setShowContent] = useState(<Camera />);
 
+    function deslogar(){
+        localStorage.removeItem("login");
+        window.location.href = "/";
+    }
+
+    // function log(){
+    //     fetch("http://sc3004996.glitch.me/log", {
+    //         method: "POST",
+    //     }).then(async response => {
+    //         console.log(await response.json())
+    //         var listalog = await response.json()
+    //         setShowContent(<Log />)
+    //     })
+    // }
+
     return(
         <div>
     <SideNav style={{backgroundColor:'#221e1e'}}
         onSelect={(selected) => {
-            if (selected == "pir") {
-                // console.log("pre fetch")
-                fetch("http://sc3004996.glitch.me/quero?", {
+            console.log(selected)
+            if (selected == "ativar") {
+                fetch("http://sc3004996.glitch.me/ativar", {
                     method: "POST",
                 });
-                // console.log("pos fetch")
+            }
+            if (selected == "desativar") {
+                // console.log("pre fetch")
+                fetch("http://sc3004996.glitch.me/desativar", {
+                    method: "POST",
+                });
+            }
+            if (selected == "log") {
+                setShowContent(<Log />)
             }
         }}
     >
         <SideNav.Toggle/>
         <SideNav.Nav defaultSelected="home">
-            <NavLink  to="/" exact>
-                <NavItem eventKey="home">
+                <NavItem eventKey="home" onClick={() => window.location.href="/" }>
                 <NavIcon>
                     <i className="fa fa-fw fa-home" style={{fontSize: '1.75em'}}/>
                 </NavIcon>
@@ -37,7 +60,6 @@ export function NavLogado(){
                     Home
                 </NavText>
                 </NavItem>
-            </NavLink>
             <NavItem eventKey="charts">
                 <NavIcon>
                     <i className="fa fa-fw fa-video-camera" style={{fontSize: '1.75em'}}/>
@@ -56,15 +78,43 @@ export function NavLogado(){
                     </NavText>
                 </NavItem>
             </NavItem>
-            <NavItem eventKey="pir">
+            <NavItem eventKey="sensores">
                 <NavIcon>
                     <i className="fa fa-fw fa-feed" style={{fontSize: '1.75em'}}/>
                 </NavIcon>
                 <NavText>
-                    PIR's
+                    Sensores
+                </NavText>
+                <NavItem eventKey="ativar">
+                    <NavText>
+                        Ativar
+                    </NavText>
+                </NavItem>
+                <NavItem eventKey="desativar">
+                    <NavText>
+                        Desativar
+                    </NavText>
+                </NavItem>
+            </NavItem>
+            {/*onClick={() => setShowContent(<Log />)}*/}
+            <NavItem eventKey="log" >
+                <NavIcon>
+                    <i className="fas fa-arrow-right-from-bracket" style={{fontSize: '1.75em'}}/>
+                </NavIcon>
+                <NavText>
+                    Mostrar Log
+                </NavText>
+            </NavItem>
+            <NavItem eventKey="sensores" onClick={deslogar}>
+                <NavIcon>
+                    <i className="fas fa-arrow-right-from-bracket" style={{fontSize: '1.75em'}}/>
+                </NavIcon>
+                <NavText>
+                    Deslogar
                 </NavText>
             </NavItem>
         </SideNav.Nav>
+
     </SideNav>
     {showContent}
         </div>

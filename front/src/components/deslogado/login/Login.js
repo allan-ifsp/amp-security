@@ -7,8 +7,12 @@ import {
     MDBBtn
 } from 'mdb-react-ui-kit';
 import './login.css';
+import swal from 'sweetalert';
 
 export function Login() {
+    // if (localStorage.getItem("login") != null) {
+    //     window.location.href = "/paginalogado"
+    // }
 
     const [inputs, setInputs] = useState({});
 
@@ -40,10 +44,10 @@ export function Login() {
                 window.location.href = "/paginalogado"
             }
             if(respStatus == 401){
-                alert("Senha incorreta")
+                swal("Senha incorreta", " ", "error")
             } else
             if(respStatus == 404){
-                alert("Usuario nao encontrado")
+                swal("Usuario não encontrado", " ", "error")
             }
         })
     }

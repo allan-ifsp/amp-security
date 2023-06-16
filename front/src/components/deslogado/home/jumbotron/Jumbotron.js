@@ -3,7 +3,7 @@ import './jumbotron.css';
 export function Jumbotron() {
 
   return (
-    <header id='empresa'>
+    <header id='empresa' className='w-100'>
       <div className='p-5 text-center bg-light'>
         <h1 className=' mt-5 titulojumbotron' >AMP Security</h1>
         <h4 className='mb-3 mt-5 text-center bg-light' >

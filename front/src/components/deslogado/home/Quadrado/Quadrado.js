@@ -15,15 +15,15 @@ import './quadrado.css'
 export function Quadrado() {
   return (
       <div id='servicos'>
-      <div className='quadrado'></div>
-      <div className='text-center bg-dark pb-5 '>
+      <div className='quadrado' ></div>
+      <div className='text-center bg-dark pb-5 w-100'>
 
-    <MDBRow className='row-cols-1 row-cols-sm-2 g-3 justify-content-center'>
+    <MDBRow className='row-cols-1 row-cols-sm-2 g-3 justify-content-center w-100'>
       <MDBCol>
         <h1 className='text-light'>Serviços</h1>
       </MDBCol>
     </MDBRow>
-    <MDBRow className='row-cols-1 row-cols-sm-2 g-3 justify-content-center'>
+    <MDBRow className='row-cols-1 row-cols-sm-2 g-3 justify-content-center w-100'>
       <MDBCol sm="2">
         <MDBCard>
           <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>

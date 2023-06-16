@@ -20,6 +20,14 @@ export function NavScroll() {
     const [showBasic, setShowBasic] = useState();
     const [showContent, setShowContent] = useState(<Home />);
 
+    function verificaLogin(){
+        if(localStorage.getItem("login") == null){
+            setShowContent(<Login />);
+        }else{
+            window.location.href = "/paginalogado";
+        }
+    }
+
     return (
         <div>
 {/*         //expand='lg' light bgColor='light' */}
@@ -60,7 +68,7 @@ export function NavScroll() {
                         </MDBNavbarItem>
 
                         <MDBNavbarItem>
-                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={() => setShowContent(<Login />)}> Acessar
+                               <MDBBtn rounded className='acesso mx-2' color='dark' onClick={verificaLogin}> Acessar
                                </MDBBtn>
                          </MDBNavbarItem>
                     </MDBNavbarNav>
